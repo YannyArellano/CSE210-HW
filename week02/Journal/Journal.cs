@@ -1,11 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
 public class Journal
 {
     public List<Entry> _entries;
+
+    public Journal()
+    {
+        _entries = new List<Entry>();
+    }
     public void AddEntry(Entry newEntry)
     {
-        _entries.Add(newEntry);  
+        _entries.Add(newEntry);
     }
-    public void DisaplayAll()
+    public void DisplayAll()
     {
         foreach (Entry entry in _entries)
         {
@@ -22,7 +30,7 @@ public class Journal
             }
         }
     }
-    public void LoadToFile(string file)
+    public void LoadFromFile(string file)
     {
         _entries.Clear();
         string[] lines = File.ReadAllLines(file);
