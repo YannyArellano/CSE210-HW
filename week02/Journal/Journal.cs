@@ -22,6 +22,7 @@ public class Journal
     }
     public void SaveToFile(string file)
     {
+        string path = Path.Combine(Directory.GetCurrentDirectory(), file);
         using (StreamWriter outputFile = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
@@ -32,6 +33,7 @@ public class Journal
     }
     public void LoadFromFile(string file)
     {
+        string path = Path.Combine(Directory.GetCurrentDirectory(), file);
         _entries.Clear();
         string[] lines = File.ReadAllLines(file);
         foreach (string line in lines)

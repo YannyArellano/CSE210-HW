@@ -15,8 +15,7 @@ public class Entry
     }
     public void Display()
     {
-        Console.WriteLine($"Date: {_date}");
-        Console.WriteLine($"PromtText: {_promtText}");
+        Console.WriteLine($"Date: {_date} - PromtText: {_promtText}");
         Console.WriteLine($"Entry {_entryText}");
         Console.WriteLine();
     }
