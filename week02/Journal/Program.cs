@@ -68,7 +68,7 @@ class Program
     }
     static string ShowMenu()
     {
-        Console.WriteLine("\n--- Journal Menu ---");
+        Console.WriteLine("\nPlease select one of the following choices");
         Console.WriteLine("1. Write a new entry");
         Console.WriteLine("2. Display all entries");
         Console.WriteLine("3. Save journal to file");
